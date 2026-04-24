@@ -10,25 +10,21 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
-# MistoS stuff
-MISTOS_MAINTAINER := franlop77
-TARGET_ENABLE_BLUR := true
-TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_BLUR := true
 TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_NOW_PLAYING := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_FACE_UNLOCK := true
-WITH_BCR := true
+TARGET_UDFPS_ANIMATIONS := true
+AFTERLIFE_GAPPS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
-PRODUCT_NAME := lineage_garnet
+# Enable quick tap
+TARGET_SUPPORTS_QUICK_TAP := true
+
+PRODUCT_NAME := afterlife_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

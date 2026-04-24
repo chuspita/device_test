@@ -891,4 +891,9 @@
      <!-- Allow more cached apps in the background -->
      <item>activity_manager/max_cached_processes=64</item>
     </string-array>
+
+    <bool name="config_windowEnableCircularEmulatorDisplay">false</bool>
+    <bool name="config_ui_enable_opengl_tracing">false</bool>
+
+    <bool name="config_avoidGfxAccel">false</bool>
 </resources>
